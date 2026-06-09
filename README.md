@@ -70,47 +70,29 @@ The session is invalidated and the user is redirected back to the Home Page.
 
 
 📂 Project Flow
-                ┌──────────────┐
-                │  Home Page   │
-                └──────┬───────┘
-                       │
-          ┌────────────┴────────────┐
-          │                         │
-          ▼                         ▼
- ┌────────────────┐      ┌────────────────┐
- │ Register Page  │      │   Login Page   │
- └───────┬────────┘      └───────┬────────┘
-         │                       │
-         ▼                       ▼
- ┌────────────────┐      ┌────────────────┐
- │ Create Account │      │ User Login     │
- │ Save to DB 💾  │      │ Verify User 🔐 │
- └───────┬────────┘      └───────┬────────┘
-         │                       │
-         └───────────┬───────────┘
-                     │
-                     ▼
-          ┌────────────────────┐
-          │     Dashboard      │
-          │ View User Details  │
-          └─────────┬──────────┘
-                    │
-          ┌─────────┴─────────┐
-          │                   │
-          ▼                   ▼
- ┌────────────────┐   ┌────────────────┐
- │ Edit Profile ✏️ │   │   Logout 🚪    │
- └───────┬────────┘   └───────┬────────┘
-         │                    │
-         ▼                    ▼
- ┌────────────────┐   ┌────────────────┐
- │ Update DB 💾   │   │   Home Page    │
- └───────┬────────┘   └────────────────┘
-         │
-         ▼
- ┌────────────────┐
- │   Dashboard    │
- └────────────────┘
+
+A[🏠 Home Page]
+--> B[📝 Register Page]
+
+B --> C[💾 Store User Details in MySQL Database]
+
+C --> D[🔐 Login Page]
+
+D --> E[✅ User Authentication]
+
+E --> F[📊 Dashboard]
+
+F --> G[✏️ Edit Profile]
+
+G --> H[💾 Update Details in Database]
+
+H --> I[📊 Dashboard]
+
+I --> J[🚪 Logout]
+
+J --> K[🏠 Home Page]
+
+
 
 🎯 Purpose
 This project was developed to learn and implement:
