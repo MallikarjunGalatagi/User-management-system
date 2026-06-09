@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a3a3a3;
+    padding: 20px;
+}
+
+/* Main Container */
+
+.container {
+    width: 450px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    border-radius: 20px;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow:
+        10px 10px 25px rgba(0, 0, 0, 0.15),
+        -10px -10px 25px rgba(255, 255, 255, 0.8);
+
+    transition: 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        15px 15px 30px rgba(0, 0, 0, 0.18),
+        -15px -15px 30px rgba(255, 255, 255, 0.9);
+}
+
+/* Titles */
+
+.page-title,
+.home-title {
+    text-align: center;
+    color: #444;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Form */
+
+form {
+    width: 100%;
+}
+
+/* Inputs */
+
+input {
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+
+    border: none;
+    outline: none;
+    border-radius: 50px;
+
+    font-size: 15px;
+    color: #444;
+
+    background: #dfe4ea;
+
+    box-shadow:
+        inset 3px 3px 6px rgba(0, 0, 0, 0.10),
+        inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+
+    margin-bottom: 18px;
+
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: #666;
+}
+
+input:hover {
+    background: #ebf5fa;
+}
+
+input:focus {
+    box-shadow:
+        0 0 10px rgba(89, 187, 220, 0.5),
+        0 0 30px rgba(89, 187, 220, 0.4),
+        inset 3px 3px 6px rgba(0, 0, 0, 0.10),
+        inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+
+/* Buttons */
+
+button {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: #6e6e6e;
+    color: white;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: 1c1c1c;
+
+    transform: translateY(-3px);
+
+       box-shadow:
+        10px 10px 20px rgba(0, 0, 0, 0.18),
+        -10px -10px 20px rgba(255, 255, 255, 0.9);
+
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Home */
+
+.home-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.home-text {
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+    transition: 0.3s;
+}
+
+
+
+
+.home-btn {
+    width: 180px;
+}
+
+/* Dashboard */
+
+.info {
+    background: #dfe4ea;
+
+    padding: 15px;
+
+    border-radius: 20px;
+
+    margin-bottom: 15px;
+
+    color: #444;
+
+    box-shadow:
+        4px 4px 10px rgba(0, 0, 0, 0.08),
+        -4px -4px 10px rgba(255, 255, 255, 0.8);
+
+    transition: 0.3s;
+}
+
+.info:hover {
+    transform: translateX(5px);
+}
+
+.label {
+    font-weight: 600;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-group a {
+    flex: 1;
+}
+
+/* Messages */
+
+.success {
+    color: green;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Links */
+
+.link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.link a {
+    text-decoration: none;
+    color: #666666;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+
+.password-container{
+    position:relative;
+    width:100%;
+    margin-bottom:18px;
+}
+
+.password-container input{
+    width:100%;
+    padding-right:50px; /* space for eye icon */
+}
+
+.toggle-password{
+    position:absolute;
+    right:20px;
+    top:40%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    font-size:20px;
+    color:#666;
+    z-index:10;
+    user-select:none;
+    transition:0.3s;
+}
+
+.toggle-password:hover{
+    color:#39a8cc;
+    transform:translateY(-50%) scale(1.15);
+}

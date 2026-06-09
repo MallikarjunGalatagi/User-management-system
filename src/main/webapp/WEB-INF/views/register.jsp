@@ -1,0 +1,133 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Register</title>
+
+<link rel="stylesheet"
+href="${pageContext.request.contextPath}/css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+
+<h2 class="page-title">
+    Create Account
+</h2>
+
+<%
+String errorMessage =
+(String)request.getAttribute("errorMessage");
+
+String successMessage =
+(String)request.getAttribute("successMessage");
+%>
+
+<% if(errorMessage != null){ %>
+    <div class="error">
+        <%= errorMessage %>
+    </div>
+<% } %>
+
+<% if(successMessage != null){ %>
+    <div class="success">
+        <%= successMessage %>
+    </div>
+<% } %>
+
+<form action="register" method="post">
+
+    <input type="text"
+           name="userName"
+           placeholder="Username"
+           required>
+
+    <input type="email"
+           name="email"
+           placeholder="Email"
+           required>
+
+    <input type="text"
+           name="mobileNo"
+           placeholder="Mobile Number"
+           maxlength="10"
+           required>
+
+    <div class="password-container">
+
+        <input type="password"
+               id="registerPassword"
+               name="password"
+               placeholder="Password"
+               required>
+
+        <span class="toggle-password"
+              onclick="toggleRegisterPassword()">
+            <i class="fa-solid fa-eye"></i>
+        </span>
+
+    </div>
+
+    <button type="submit">
+        Create Account
+    </button>
+
+</form>
+
+<div class="link">
+
+    Already have an account?
+
+    <br><br>
+
+    <a href="login">
+        Login Here
+    </a>
+
+</div>
+
+
+</div>
+
+<script>
+
+function toggleRegisterPassword(){
+
+    var password =
+    document.getElementById("registerPassword");
+
+    var eye =
+    document.querySelector(".toggle-password i");
+
+    if(password.type === "password"){
+
+        password.type = "text";
+
+        eye.classList.remove("fa-eye");
+        eye.classList.add("fa-eye-slash");
+
+    }
+    else{
+
+        password.type = "password";
+
+        eye.classList.remove("fa-eye-slash");
+        eye.classList.add("fa-eye");
+
+    }
+}
+
+</script>
+
+</body>
+</html>
