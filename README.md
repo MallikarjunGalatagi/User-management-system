@@ -1,0 +1,122 @@
+👤 User Management System
+
+📖 How It Works
+
+This User Management System allows users to create an account, log in securely, manage their profile information, and log out. All user details are stored and retrieved from a MySQL database using JDBC and Servlets.
+
+When a new user visits the application, they can register by providing their username, email, mobile number, and password. After registration, the user can log in using their username or email along with their password.
+
+Once logged in, the user is redirected to the Dashboard, where they can view their profile details. The user can also edit their profile information, and any changes made are updated in the database. When finished, the user can log out, which ends the session and redirects them back to the Home Page.
+
+✨ Features
+
+🔹 User Registration
+🔹 User Login using Username or Email
+🔹 Password Show/Hide 👁️
+🔹 User Dashboard
+🔹 Edit Profile
+🔹 Session Management
+🔹 Secure Logout
+🔹 MySQL Database Connectivity
+🔹 Responsive and Modern UI
+
+🏠 Home Page
+Users are welcomed with two options:
+* 🔑 Login
+* 📝 Register
+
+📝 Registration
+New users can create an account by entering:
+* Username
+* Email
+* Mobile Number
+* Password
+The details are stored in the MySQL database.
+
+🔐 Login
+Users can login using:
+* Username or Email
+* Password
+After successful authentication, they are redirected to the Dashboard.
+
+📊 Dashboard
+The dashboard displays:
+* User ID
+* Username
+* Email
+* Mobile Number
+* Account Creation Date
+
+✏️ Edit Profile
+Users can update their:
+* Username
+* Email
+* Mobile Number
+* Password
+The updated information is saved in the database.
+
+🚪 Logout
+The session is invalidated and the user is redirected back to the Home Page.
+
+🛠️ Technologies Used
+💻 Java
+🌐 JSP
+⚙️ Servlets
+🗄️ JDBC
+🐬 MySQL
+🎨 HTML
+🎨 CSS
+🚀 Apache Tomcat
+
+
+📂 Project Flow
+                ┌──────────────┐
+                │  Home Page   │
+                └──────┬───────┘
+                       │
+          ┌────────────┴────────────┐
+          │                         │
+          ▼                         ▼
+ ┌────────────────┐      ┌────────────────┐
+ │ Register Page  │      │   Login Page   │
+ └───────┬────────┘      └───────┬────────┘
+         │                       │
+         ▼                       ▼
+ ┌────────────────┐      ┌────────────────┐
+ │ Create Account │      │ User Login     │
+ │ Save to DB 💾  │      │ Verify User 🔐 │
+ └───────┬────────┘      └───────┬────────┘
+         │                       │
+         └───────────┬───────────┘
+                     │
+                     ▼
+          ┌────────────────────┐
+          │     Dashboard      │
+          │ View User Details  │
+          └─────────┬──────────┘
+                    │
+          ┌─────────┴─────────┐
+          │                   │
+          ▼                   ▼
+ ┌────────────────┐   ┌────────────────┐
+ │ Edit Profile ✏️ │   │   Logout 🚪    │
+ └───────┬────────┘   └───────┬────────┘
+         │                    │
+         ▼                    ▼
+ ┌────────────────┐   ┌────────────────┐
+ │ Update DB 💾   │   │   Home Page    │
+ └───────┬────────┘   └────────────────┘
+         │
+         ▼
+ ┌────────────────┐
+ │   Dashboard    │
+ └────────────────┘
+
+🎯 Purpose
+This project was developed to learn and implement:
+* Java Web Development
+* JSP and Servlets
+* JDBC Connectivity
+* Session Handling
+* CRUD Operations
+* Frontend Styling with CSS
