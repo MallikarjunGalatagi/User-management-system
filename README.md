@@ -10,14 +10,14 @@ Once logged in, the user is redirected to the Dashboard, where they can view the
 
 ✨ Features
 
-🔹 User Registration
-🔹 User Login using Username or Email
-🔹 Password Show/Hide 👁️
-🔹 User Dashboard
-🔹 Edit Profile
-🔹 Session Management
-🔹 Secure Logout
-🔹 MySQL Database Connectivity
+🔹 User Registration<br>
+🔹 User Login using Username or Email<br>
+🔹 Password Show/Hide 👁️<br>
+🔹 User Dashboard<br>
+🔹 Edit Profile<br>
+🔹 Session Management<br>
+🔹 Secure Logout<br>
+🔹 MySQL Database Connectivity<br>
 🔹 Responsive and Modern UI
 
 🏠 Home Page
